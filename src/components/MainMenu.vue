@@ -1,6 +1,5 @@
 <template>
   <div>
-    <img :src="getPhoto" draggable="false" :title="$t('imgTitle')" class="icon" @click="$router.push('settings')"/>
     <ul class="custom-opeartor">
       <li :title="$t('deploy')"><deploy/></li>
       <li :title="$t('download')"><deploy type="download"/></li>
@@ -15,25 +14,22 @@
       text-color="#fff"
       active-text-color="#fff">
       <el-menu-item index="main" :title="$t('recentArticle')">
-        <i class="iconfont icon-main"/>
+        Recents
       </el-menu-item>
       <el-menu-item index="cates" :title="$t('articleCategories')">
-        <i class="iconfont icon-folder"/>
+        Categories
       </el-menu-item>
       <el-menu-item index="tags" :title="$t('articleTags')">
-        <i class="iconfont icon-tags"/>
+        Tags
       </el-menu-item>
       <el-menu-item index="drafts" :title="$t('drafts')">
-        <i class="iconfont icon-drafts"/>
+        Drafts
       </el-menu-item>
       <el-menu-item index="localview" :title="$t('localview')">
-        <i class="iconfont icon-localview"/>
-      </el-menu-item>
-      <el-menu-item index="about" :title="$t('menuAbout')">
-        <i class="iconfont icon-info"/>
+        Local View
       </el-menu-item>
       <el-menu-item index="settings" :title="$t('menuSettings')">
-        <i class="iconfont icon-setting"/>
+        Setting
       </el-menu-item>
     </el-menu>
   </div>
@@ -63,7 +59,6 @@ export default {
         case 'tags':
         case 'localview':
         case 'settings':
-        case 'about':
           this.changeType('preview')
           this.setCollapse(false)
           this.$router.push({ name: index })
@@ -105,7 +100,7 @@ export default {
     }
   }
   .custom-opeartor {
-    margin-top: 10px;
+    margin-top: 100px;
     padding: 0;
     text-align: center;
     list-style: none;
@@ -139,7 +134,7 @@ export default {
     }
   }
   /deep/ .el-menu--collapse {
-    width: 80px !important;
+    width: auto !important;
     .el-menu-item {
       height: 40px;
       border-left: 5px solid transparent;
@@ -149,8 +144,7 @@ export default {
       [class^='el-icon-'] {
         color: #fff;
         font-size: 15px;
-        &.icon-tags,
-        &.icon-info {
+        &.icon-tags{
           font-size: 18px;
         }
       }

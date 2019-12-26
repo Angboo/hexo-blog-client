@@ -91,7 +91,7 @@ export default {
   // 左侧sidebar样式
   .sidebar {
     overflow: hidden;
-    width: 80px !important;
+    width: 120px !important;
     text-align: center;
     background-color: #5576bd;
     cursor: pointer;
