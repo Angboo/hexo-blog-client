@@ -62,6 +62,8 @@
   "postForm.title.placeholder": "input title",
   "postForm.path.label": "path",
   "postForm.path.placeholder": "path input(can empty)",
+  "postForm.description.label": "description",
+  "postForm.description.placeholder": "description(optional)",
   "postForm.author.label": "author",
   "postForm.author.placeholder": "input author",
   "postForm.categories.label": "cates",
