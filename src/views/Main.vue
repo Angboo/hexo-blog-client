@@ -272,7 +272,6 @@ export default {
       postFormRules: {
         title: [{ required: true, trigger: 'blur' }],
         author: [{ required: true, trigger: 'blur' }],
-        description: [{ required: true, trigger: 'blur' }],
         categories: [{ required: true, trigger: 'blur' }],
         tags: [{ required: true, trigger: 'blur' }],
         content: [{ required: true, trigger: 'blur' }],
@@ -375,7 +374,7 @@ export default {
         content: post._content, // 修改后文
         tags: [], // 标签
         categories: [], // 分类
-        description: post.description,
+        description: post.description || undefined,
         toc: post.toc, // 开启toc
         img: post.img, // 文章首页图
         date: post.date, // 创建时间
